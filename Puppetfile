@@ -7,7 +7,7 @@ mod 'puppetlabs/stdlib',  '7.0.1'
 mod 'puppetlabs/concat',  '7.0.1'
 mod 'puppetlabs-support_tasks', '2.0.0'
 mod 'danieldreier-autosign', '0.3.0'
-mod 'puppetlabs/stdlib', '6.6.0'
+#mod 'puppetlabs/stdlib', '6.6.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
