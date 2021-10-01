@@ -5,6 +5,7 @@ forge 'https://forge.puppet.com'
 mod 'puppetlabs-support_tasks', '2.0.0'
 mod 'danieldreier-autosign', '0.3.0'
 mod 'puppetlabs/stdlib', '6.6.0'
+mod 'puppetlabs-bootstrap', '2.1.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
