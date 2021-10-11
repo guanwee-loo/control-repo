@@ -4,7 +4,7 @@ forge 'https://forge.puppet.com'
 # Versions should be updated to be the latest at the time you start
 mod 'puppetlabs-support_tasks', '2.0.0'
 mod 'danieldreier-autosign', '0.3.0'
-mod 'puppetlabs/stdlib', '6.6.0'
+#mod 'puppetlabs/stdlib', '6.6.0'
 mod 'puppetlabs-bootstrap', '2.1.0'
 mod 'puppetlabs-iis', '8.0.3'
 mod 'puppetlabs-pwshlib', '0.10.1'
