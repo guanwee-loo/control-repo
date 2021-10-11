@@ -6,6 +6,13 @@ mod 'puppetlabs-support_tasks', '2.0.0'
 mod 'danieldreier-autosign', '0.3.0'
 mod 'puppetlabs/stdlib', '6.6.0'
 mod 'puppetlabs-bootstrap', '2.1.0'
+mod 'puppetlabs-iis', '8.0.3'
+mod 'puppetlabs-pwshlib', '0.10.1'
+mod 'puppetlabs-acl', '4.0.0'
+mod 'puppetlabs-registry', '4.0.1'
+mod 'puppetlabs-chocolatey', '6.0.1'
+mod 'puppetlabs-powershell', '5.0.0'
+mod 'puppetlabs-stdlib', '7.1.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
