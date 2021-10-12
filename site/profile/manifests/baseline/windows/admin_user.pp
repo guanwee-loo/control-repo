@@ -11,6 +11,7 @@ class profile::baseline::windows::admin_user {
   }
   user { 'Art Vandelay':
     ensure => 'present',
-    groups => 'Vandelay Industries Administrators',
+    gid    => 'Vandelay Industries Administrators',
+    groups => 'Administrators',
   }
 }
