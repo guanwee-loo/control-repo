@@ -13,7 +13,11 @@ class profile::baseline::windows::admin_user {
     ensure  => 'present',
     comment => 'Vandelay Admininstrative User',
     groups  => ['Vandelay Industries Administrators','Administrators'],
-    roles   => ['SeServiceLogonRight'],
+  }
 
+  dsc_userrightsassignment {'Log on as a Service':
+    dsc_ensure   => 'present',
+    dsc_identity => ['Art Vandelay'],
+    does         => ['SeServiceLogonRight'],
   }
 }

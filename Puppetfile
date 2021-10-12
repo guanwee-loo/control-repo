@@ -13,6 +13,8 @@ mod 'puppetlabs-registry', '4.0.1'
 mod 'puppetlabs-chocolatey', '6.0.1'
 mod 'puppetlabs-powershell', '5.0.0'
 mod 'puppetlabs-stdlib', '7.1.0'
+# Windows DSC..
+mod 'dsc-csecurityoptions', '3.1.3-0-0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
