@@ -10,7 +10,10 @@ class profile::baseline::windows::admin_user {
     ensure => 'present',
   }
   user { 'Art Vandelay':
-    ensure => 'present',
-    groups => ['Vandelay Industries Administrators','Administrators'],
+    ensure  => 'present',
+    comment => 'Vandelay Admininstrative User',
+    groups  => ['Vandelay Industries Administrators','Administrators'],
+    roles   => ['SeServiceLogonRight'],
+
   }
 }
