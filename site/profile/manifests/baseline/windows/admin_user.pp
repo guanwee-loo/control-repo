@@ -29,11 +29,12 @@ class profile::baseline::windows::admin_user {
   }
 
   acl {'C:/adminTools':
-    permissions => [
+    permissions                => [
       { identity => 'Art Vandelay', rights => ['full']},
       { identity => 'Vandelay Industries Administrators', rights => ['read','execute']}
     ],
-    require     => File['C:/adminTools'],
+    inherit_parent_permissions => 'false',
+    require                    => File['C:/adminTools'],
   }
 
 }
