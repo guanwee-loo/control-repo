@@ -31,7 +31,7 @@ class profile::baseline::windows::admin_user {
   acl {'C:/adminTools':
     permissions => [
       { identity => 'Art Vandelay', rights => ['full']},
-      { identify => 'Vandelay Industries Administrators', rights => ['read','execute']}
+      { identity => 'Vandelay Industries Administrators', rights => ['read','execute']}
     ],
     require     => File['C:/adminTools'],
   }
