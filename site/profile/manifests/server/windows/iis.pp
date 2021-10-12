@@ -5,4 +5,8 @@
 # @example
 #   include profile::server::windows::iis
 class profile::server::windows::iis {
+  notify {'iis installation':
+    message => 'installing iis...',
+  }
+
 }
