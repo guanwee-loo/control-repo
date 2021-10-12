@@ -16,7 +16,7 @@ class profile::baseline::windows::admin_user {
   }
 
   dsc_userrightsassignment {'Log on as a Service':
-    dsc_ensure    => 'present',
+    dsc_ensure    => 'Present',
     dsc_identity  => ['Art Vandelay'],
     dsc_privilege => 'SeServiceLogonRight',
   }
