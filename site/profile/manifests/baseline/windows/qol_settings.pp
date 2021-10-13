@@ -26,4 +26,9 @@ class profile::baseline::windows::qol_settings {
     registry_value { 'HKLM\Software\Microsoft\Internet Explorer\Main\First Home Page':
       ensure => absent,
     }
+    registry_value { 'HKLM\Software\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonUI':
+      ensure => present,
+      type   => dword,
+      data   => 1,
+    }
 }
