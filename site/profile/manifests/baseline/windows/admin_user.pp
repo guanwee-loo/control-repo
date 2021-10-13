@@ -18,6 +18,7 @@ class profile::baseline::windows::admin_user {
   }
 
   # Use a 3rd party DSC from the forge for now as I am unable to determine whether the User resource can archieve this
+  # Specify the hostname before the user name to avoid re-applying the change in every in Puppet run 
   dsc_userrightsassignment {'Log on as a Service':
     require       => User['Art Vandelay'],
     dsc_ensure    => 'Present',
@@ -26,7 +27,7 @@ class profile::baseline::windows::admin_user {
   }
 
   file {'C:/adminTools':
-    ensure => directory,
+    ensure  => directory,
   }
 
   acl {'C:/adminTools':
