@@ -9,6 +9,7 @@ class profile::baseline::windows::admin_user {
   group { 'Vandelay Industries Administrators':
     ensure => 'present',
   }
+
   user { 'Art Vandelay':
     ensure  => 'present',
     comment => 'Vandelay Admininstrative User',
@@ -18,10 +19,10 @@ class profile::baseline::windows::admin_user {
 
   # Use a 3rd party DSC from the forge for now as I am unable to determine whether the User resource can archieve this
   dsc_userrightsassignment {'Log on as a Service':
+    require       => User['Art Vandelay'],
     dsc_ensure    => 'Present',
     dsc_identity  => ["${facts['hostname']}\\Art Vandelay"],
     dsc_privilege => 'SeServiceLogonRight',
-    before        => User['Art Vandelay'],
   }
 
   file {'C:/adminTools':
@@ -29,12 +30,12 @@ class profile::baseline::windows::admin_user {
   }
 
   acl {'C:/adminTools':
+    require                    => File['C:/adminTools'],
     permissions                => [
       { identity => 'Art Vandelay', rights => ['full']},
       { identity => 'Vandelay Industries Administrators', rights => ['read','execute']}
     ],
     inherit_parent_permissions => 'false',
-    require                    => File['C:/adminTools'],
   }
 
 }
