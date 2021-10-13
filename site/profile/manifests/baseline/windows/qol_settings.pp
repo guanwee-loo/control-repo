@@ -18,11 +18,6 @@ class profile::baseline::windows::qol_settings {
       type   => dword,
       data   => 0,
     }
-    registry_value { 'HKLM\SOFTWARE\Wow6432node\Microsoft\Active Setup\Installed Components\{A509B1A8-37EF-4b3f-8CFC-4F3A74704073}\IsInstalled':
-      ensure => present,
-      type   => dword,
-      data   => 0,
-    }
     registry_value { 'HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IEHarden':
       ensure => present,
       type   => dword,
