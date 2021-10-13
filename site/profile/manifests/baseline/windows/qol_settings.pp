@@ -28,16 +28,6 @@ class profile::baseline::windows::qol_settings {
       type   => dword,
       data   => 0,
     }
-    registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OC Manager\Subcomponents\iehardenadmin':
-      ensure => present,
-      type   => dword,
-      data   => 0,
-    }
-    registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OC Manager\Subcomponents\iehardenuser':
-      ensure => present,
-      type   => dword,
-      data   => 0,
-    }
     registry_value { 'HKLM\Software\Microsoft\Internet Explorer\Main\First Home Page':
       ensure => absent,
     }
