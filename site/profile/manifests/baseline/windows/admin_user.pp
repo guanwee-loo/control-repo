@@ -19,9 +19,9 @@ class profile::baseline::windows::admin_user {
   # Use a 3rd party DSC from the forge for now as I am unable to determine whether the User resource can archieve this
   dsc_userrightsassignment {'Log on as a Service':
     dsc_ensure    => 'Present',
-    dsc_identity  => ['Art Vandelay'],
+    dsc_identity  => ['.\Art Vandelay'],
     dsc_privilege => 'SeServiceLogonRight',
-    before        => User['.\Art Vandelay'],
+    before        => User['Art Vandelay'],
   }
 
   file {'C:/adminTools':
