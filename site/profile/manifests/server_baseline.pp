@@ -9,6 +9,7 @@ class profile::server_baseline {
   case $facts['kernel'] {
     'windows': {
       include profile::baseline::windows::admin_user
+      include profile::baseline::windows::qol_settings
     }
     default: {
     fail('Unsupported operating system!')
