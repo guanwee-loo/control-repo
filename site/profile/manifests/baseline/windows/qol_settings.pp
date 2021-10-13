@@ -23,17 +23,7 @@ class profile::baseline::windows::qol_settings {
       type   => dword,
       data   => 0,
     }
-    registry_value { 'HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IEHarden':
-      ensure => present,
-      type   => dword,
-      data   => 0,
-    }
     registry_value { 'HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IEHarden':
-      ensure => present,
-      type   => dword,
-      data   => 0,
-    }
-    registry_value { 'HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\IEHarden':
       ensure => present,
       type   => dword,
       data   => 0,
