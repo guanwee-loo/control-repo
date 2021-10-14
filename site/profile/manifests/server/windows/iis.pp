@@ -16,7 +16,7 @@ class profile::server::windows::iis {
       require      => File['indexhtml'],
     }
 
-    file {'indexhtml':
+    file {"${web_root}/index.html":
       ensure => 'present',
       source => 'puppet:///modules/profile/index.html'
     }
