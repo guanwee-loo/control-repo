@@ -8,9 +8,8 @@
 #   include profile::installer::mobaxterm
 class profile::installer::mobaxterm (String $package_path = '2142021091974654/MobaXterm_Installer_v21.4.zip') {
   $source = "https://download.mobatek.net/${$package_path}"
-  $download_folder = profile::baseline::windows::admin_user::script_location
-  $extract_folder = "${download_folder}/${split($package_path,'/')[0]}"
-  $archive_file = "${download_folder}/${package_path}"
+  $extract_folder = "${profile::baseline::windows::admin_user::script_location}/${split($package_path,'/')[0]}"
+  $archive_file = "${profile::baseline::windows::admin_user::script_location}/${package_path}"
   $msi_file = "${regsubst($archive_file,'zip','msi')}"
 
   archive { $archive_file:
