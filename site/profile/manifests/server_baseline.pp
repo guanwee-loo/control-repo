@@ -10,9 +10,6 @@ class profile::server_baseline {
     'windows': {
       include profile::baseline::windows::admin_user
       include profile::baseline::windows::qol_settings
-      include profile::installer::mobaxterm
-      include profile::installer::chocolatey
-      include profile::installer::sevenzip
     }
     default: {
       fail('Unsupported operating system!')

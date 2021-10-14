@@ -6,4 +6,7 @@
 #   include profile::base
 class profile::base {
   include profile::server_baseline
+  include profile::installer::mobaxterm
+  include profile::installer::chocolatey
+  include profile::installer::sevenzip
 }
