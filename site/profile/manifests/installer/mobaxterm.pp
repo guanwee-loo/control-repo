@@ -25,7 +25,7 @@ class profile::installer::mobaxterm (
     extract_path => $extract_folder,
   }
 
-  package { 'MobaXterm':
+  package { 'MobaXterm-21.4':
     ensure          => installed,
     source          => $msi_file,
     install_options => ['/qn'],
