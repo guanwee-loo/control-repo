@@ -23,7 +23,7 @@ class profile::installer::mobaxterm (String $package_path = '2142021091974654/Mo
   package { 'MobaXterm':
     ensure            => installed,
     source            => $msi_file,
-    installed_options => ['/qn'],
+    install_options => ['/qn'],
     subscribe         => Archive[$archive_file],
   }
 
