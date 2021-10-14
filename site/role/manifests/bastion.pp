@@ -6,7 +6,6 @@
 #   include role::bastion
 class role::bastion {
   include profile::base
-  include profile::installer::mobaxterm
   if $trusted['extensions']['pp_role'] == 'webserver' {
     include profile::webserver
   }
