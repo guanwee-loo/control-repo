@@ -14,6 +14,7 @@ mod 'puppetlabs-chocolatey', '6.0.1'
 mod 'puppetlabs-powershell', '5.0.0'
 mod 'puppetlabs-stdlib', '8.1.0'
 mod 'puppet-archive', '6.0.1'
+mod 'puppetlabs-reboot', '4.1.0'
 # Windows DSC..
 mod 'dsc-csecurityoptions', '3.1.3-0-0'
 
