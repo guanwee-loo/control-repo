@@ -5,7 +5,7 @@
 # @example
 #   include profile::server::windows::iis
 class profile::server::windows::iis {
-    $web_root='c:/inetpub/wwwroot'
+    $web_root='c:\\inetpub\\wwwroot'
     $iis_features = ['Web-WebServer']
     iis_feature { $iis_features:
       ensure => 'present',
@@ -20,10 +20,13 @@ class profile::server::windows::iis {
   iis_site {'basics3':
     ensure       => 'started',
     physicalpath => $web_root,
-    require      => File["${web_root}/index.html"],
+    require      => [
+      File["${web_root}\\index.html"],
+      Iis_site['Default Web Site'],
+    ],
   }
 
-  file {"${web_root}/index.html":
+  file {"${web_root}\\index.html":
     ensure => 'present',
     source => 'puppet:///modules/profile/index.html'
   }
