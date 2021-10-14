@@ -12,7 +12,7 @@ class profile::server_baseline {
       include profile::baseline::windows::qol_settings
     }
     default: {
-    fail('Unsupported operating system!')
+      fail('Unsupported operating system!')
     }
   }
 }

@@ -17,7 +17,7 @@ class profile::baseline::windows::admin_user {
   user { $admin_user:
     ensure  => 'present',
     comment => 'Vandelay Admininstrative User',
-    groups  => ["${admin_group}",'Administrators'],
+    groups  => [$admin_group,'Administrators'],
     before  => File[$script_location],
   }
 
