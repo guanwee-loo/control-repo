@@ -13,7 +13,7 @@ class profile::server::windows::iis {
     iis_site {'basics3':
       ensure       => 'started',
       physicalpath => $web_root,
-      require      => File['indexhtml'],
+      require      => File["${web_root}/index.html"],
     }
 
     file {"${web_root}/index.html":
