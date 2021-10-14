@@ -1,4 +1,4 @@
-# @summary A short summary of the purpose of this class
+# @summary Configure Quality of Life settings
 #
 # (1) Disable IEESC 
 # (based on https://docs.microsoft.com/en-us/troubleshoot/browsers/enhanced-security-configuration-faq#how-to-turn-off-internet-explorer-esc-on-windows-servers)
@@ -25,6 +25,16 @@ class profile::baseline::windows::qol_settings {
     }
     registry_value { 'HKLM\Software\Microsoft\Internet Explorer\Main\First Home Page':
       ensure => absent,
+    }
+    registry_value { 'HKLM\Software\Microsoft\Internet Explorer\Main\Default_Page_URL':
+      ensure => present,
+      type   => string,
+      data   => 'about:blank',
+    }
+    registry_value { 'HKLM\Software\Microsoft\Internet Explorer\Main\Start Page':
+      ensure => present,
+      type   => string,
+      data   => 'about:blank',
     }
     registry_value { 'HKLM\Software\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonUI':
       ensure => present,
