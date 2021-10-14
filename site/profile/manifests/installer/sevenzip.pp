@@ -9,7 +9,7 @@ class profile::installer::sevenzip {
   include chocolatey
 
   package { '7zip':
-    ensure          => latest,
+    ensure          => installed,
     provider        => 'chocolatey',
     install_options => ['-installArgs','/qn'],
   }
