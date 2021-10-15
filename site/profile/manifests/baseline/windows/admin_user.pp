@@ -16,10 +16,11 @@ class profile::baseline::windows::admin_user {
   }
 
   user { $admin_user:
-    ensure  => 'present',
-    comment => 'Vandelay Admininstrative User',
-    groups  => [$admin_group,'Administrators'],
-    before  => File[$script_location],
+    ensure   => 'present',
+    password => lookup('password'),
+    comment  => 'Vandelay Admininstrative User',
+    groups   => [$admin_group,'Administrators'],
+    before   => File[$script_location],
   }
 
   # Use a 3rd party DSC from the forge for now as I am unable to determine whether the User resource can archieve this

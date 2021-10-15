@@ -20,5 +20,12 @@ hierarchy:
   - name: "software"
     paths:
       - "software/mobaxterm.yaml"
+  - name: "Sensitive data"
+    lookup_up: eyaml_look_key #eyaml backend
+    paths:
+      - "secrets/windows/password.eyaml"
+    options:
+      pkcs7_private_key: /etc/puppetlabs/puppet/eyaml/private_key.pkcs7.pem
+      pkcs7_public_key:  /etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem    
   - name: 'common'
     path: 'common.yaml'
