@@ -1,6 +1,6 @@
 # @summary Install requsite software
 #
-# A description of what this class does
+# Install required productivity software in the server
 #
 # @example
 #   include profile::install_baseline
