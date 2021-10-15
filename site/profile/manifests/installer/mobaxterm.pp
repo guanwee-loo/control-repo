@@ -4,15 +4,15 @@
 # Using this method requires one to know the exact URL of the zip file to be downloaded 
 # and the name of the package used in the Windows registry.
 # The path consists of a random string of numbers and the zip file name and extract msi file names are not the same. 
-#  --> This means they need to be hardcoded.
+#  --> This means they need to be hardcoded in the hiera
 #
 # @example
 #   include profile::installer::mobaxterm
 class profile::installer::mobaxterm (
 
-    String $src =  lookup($profile::installer::mobaxterm::src),
-    String $zip_file_name = lookup($profile::installer::mobaxterm::zip_file_name),
-    String $msi_file_name = lookup($profile::installer::mobaxterm::msi_file_name),
+    String $src =  lookup('profile::installer::mobaxterm::src'),
+    String $zip_file_name = lookup('profile::installer::mobaxterm::zip_file_name'),
+    String $msi_file_name = lookup('profile::installer::mobaxterm::msi_file_name'),
 ) {
 
   $source = "${src}/${$zip_file_name}"
