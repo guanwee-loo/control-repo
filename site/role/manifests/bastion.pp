@@ -1,6 +1,7 @@
 # @summary A bastion server role
 #
-# This class is used to configure the baselines for an OS as well as a webserver
+# This class is used to configure the baselines for a server
+# Also install a webserver if its certifcate extensions contains the webserver pp_role
 #
 # @example
 #   include role::bastion

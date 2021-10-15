@@ -28,7 +28,7 @@ class profile::server::windows::iis {
 
   file {"${web_root}\\index.html":
     ensure => 'present',
-    source => 'puppet:///modules/profile/index.html'
+    source => 'puppet:///modules/profile/web/index.html'
   }
 
 }
