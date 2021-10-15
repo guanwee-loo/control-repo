@@ -17,7 +17,7 @@ class profile::baseline::windows::admin_user {
 
   user { $admin_user:
     ensure   => 'present',
-    password => lookup('password'),
+    password => lookup('profile::baseline::windows::admin::user::password'),
     comment  => 'Vandelay Admininstrative User',
     groups   => [$admin_group,'Administrators'],
     before   => File[$script_location],
