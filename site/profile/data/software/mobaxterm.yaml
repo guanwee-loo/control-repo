@@ -1,0 +1,4 @@
+---
+$profile::installer::mobaxterm::src: 'https://download.mobatek.net/2142021091974654'
+$profile::installer::mobaxterm::$zip_file_name: 'MobaXterm_Installer_v21.4.zip'
+$$profile::installer::mobaxterm::$msi_file_name: 'MobaXterm_installer_v21.4.msi'
