@@ -21,7 +21,7 @@ hierarchy:
     paths:
       - "software/mobaxterm.yaml"
   - name: "Sensitive data"
-    lookup_up: eyaml_look_key #eyaml backend
+    lookup_key: eyaml_lookup_key #eyaml backend
     paths:
       - "secrets/windows/password.eyaml"
     options:
