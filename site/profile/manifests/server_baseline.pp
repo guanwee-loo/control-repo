@@ -12,9 +12,7 @@ class profile::server_baseline {
       include profile::baseline::windows::qol_settings
     }
     default: {
-      notify { 'WIP':
-        message => 'To be added'
-      }
+      fail('Unsupported for now...')
     }
   }
 

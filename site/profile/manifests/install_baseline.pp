@@ -13,9 +13,7 @@ class profile::install_baseline {
       include profile::installer::sevenzip
     }
     default: {
-      notify { 'WIP':
-        message => 'To be added'
-      }
+      fail('Unsupported for now...')
     }
   }
 

@@ -11,9 +11,7 @@ class profile::webserver {
       include profile::server::windows::iis
     }
     default: {
-      notify { 'WIP':
-        message => 'To be added'
-      }
+      fail('Unsupported for now...')
     }
   }
 
