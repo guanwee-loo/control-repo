@@ -10,9 +10,9 @@
 #   include profile::installer::mobaxterm
 class profile::installer::mobaxterm (
 
-    String $src = 'https://download.mobatek.net/2142021091974654',
-    String $zip_file_name = 'MobaXterm_Installer_v21.4.zip',
-    String $msi_file_name = 'MobaXterm_installer_21.4.msi',
+    String $src =  lookup($profile::installer::mobaxterm::src),
+    String $zip_file_name = lookup($profile::installer::mobaxterm::zip_file_name),
+    String $msi_file_name = lookup($profile::installer::mobaxterm::msi_file_name),
 ) {
 
   $source = "${src}/${$zip_file_name}"
