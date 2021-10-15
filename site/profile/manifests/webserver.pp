@@ -11,7 +11,7 @@ class profile::webserver {
       include profile::server::windows::iis
     }
     default: {
-      fail('Unsupported for now...')
+      fail('Unsupported for now')
     }
   }
 

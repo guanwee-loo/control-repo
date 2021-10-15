@@ -13,7 +13,7 @@ class profile::install_baseline {
       include profile::installer::sevenzip
     }
     default: {
-      fail('Unsupported for now...')
+      fail('Unsupported for now')
     }
   }
 
