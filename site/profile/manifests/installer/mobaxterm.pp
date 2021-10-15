@@ -1,18 +1,20 @@
-# @summary A short summary of the purpose of this class
+# @summary Install MobaXterm Community Edition
 #
 # An example to using regular Puppet resources to download and install MobaXTerm using the silent option '/qn'
-# Using this method requires one to know the exact URL of the zip file to be downloaded. 
+# Using this method requires one to know the exact URL of the zip file to be downloaded 
+# and the name of the package used in the Windows registry.
 # The path consists of a random string of numbers and the zip file name and extract msi file names are not the same. 
 #  --> This means they need to be hardcoded.
 #
 # @example
 #   include profile::installer::mobaxterm
 class profile::installer::mobaxterm (
+
     String $src = 'https://download.mobatek.net/2142021091974654',
     String $zip_file_name = 'MobaXterm_Installer_v21.4.zip',
     String $msi_file_name = 'MobaXterm_installer_21.4.msi',
-  )
-{
+) {
+
   $source = "${src}/${$zip_file_name}"
   $extract_folder = $profile::baseline::windows::admin_user::script_location
   $archive_file = "${extract_folder}/${zip_file_name}"

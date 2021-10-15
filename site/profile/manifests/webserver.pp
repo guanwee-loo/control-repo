@@ -1,16 +1,20 @@
-# @summary A short summary of the purpose of this class
+# @summary Install a webserver
 #
-# A description of what this class does
+# Install an IIS web server for windows
 #
 # @example
 #   include profile::webserver
 class profile::webserver {
+
   case $facts['kernel'] {
     'windows': {
       include profile::server::windows::iis
     }
     default: {
-      fail('Unsupported operating system!')
+      notify { 'WIP':
+        message => 'To be added'
+      }
     }
   }
+
 }

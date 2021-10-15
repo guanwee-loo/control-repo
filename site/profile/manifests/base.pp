@@ -1,12 +1,12 @@
-# @summary A short summary of the purpose of this class
+# @summary A base class to contain all baseline profiles
 #
-# A description of what this class does
+# Collect all the server (OS level) and installable software baselines
 #
 # @example
 #   include profile::base
 class profile::base {
+
   include profile::server_baseline
-  include profile::installer::mobaxterm
-  include profile::installer::chocolatey
-  include profile::installer::sevenzip
+  include profile::install_baseline
+
 }

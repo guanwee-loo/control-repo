@@ -1,9 +1,11 @@
-# @summary A short summary of the purpose of this class
+# @summary Install Chocolatey
 #
-# A description of what this class does
+# Install Windows Chocolatey Package Manager with default settings.
 #
 # @example
 #   include profile::installer::chocolatey
 class profile::installer::chocolatey {
+
     include chocolatey
+
 }

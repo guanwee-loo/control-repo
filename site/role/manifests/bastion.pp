@@ -1,12 +1,15 @@
-# @summary A short summary of the purpose of this class
+# @summary A bastion server role
 #
-# A description of what this class does
+# This class is used to configure the baselines for an OS as well as a webserver
 #
 # @example
 #   include role::bastion
 class role::bastion {
+
   include profile::base
+
   if $trusted['extensions']['pp_role'] == 'webserver' {
     include profile::webserver
   }
+
 }

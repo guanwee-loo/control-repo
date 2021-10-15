@@ -1,13 +1,14 @@
-# @summary A short summary of the purpose of this class
+# @summary Setup an administrative user/group and script folder
 #
-# Create an admin user and a script folder 
+# Create an privileged user and group 
+# Create an admin script folder with ACL
 #
 # @example
 #   include profile::baseline::windows::admin_user
 class profile::baseline::windows::admin_user {
 
-  $admin_user = 'Art Vandelay'
-  $admin_group = 'Vandelay Industries Administrators'
+  $admin_user      = 'Art Vandelay'
+  $admin_group     = 'Vandelay Industries Administrators'
   $script_location = 'C:/adminTools'
 
   group { $admin_group:
@@ -37,7 +38,7 @@ class profile::baseline::windows::admin_user {
   acl {$script_location:
     require                    => File[$script_location],
     permissions                => [
-      { identity => $admin_user, rights => ['full']},
+      { identity => $admin_user, rights  => ['full']},
       { identity => $admin_group, rights => ['read','execute']}
     ],
     inherit_parent_permissions => 'false',

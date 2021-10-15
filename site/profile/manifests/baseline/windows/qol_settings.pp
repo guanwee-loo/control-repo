@@ -2,12 +2,13 @@
 #
 # (1) Disable IEESC 
 # (based on https://docs.microsoft.com/en-us/troubleshoot/browsers/enhanced-security-configuration-faq#how-to-turn-off-internet-explorer-esc-on-windows-servers)
-
-# (2) enable Windows Shutdown Event Tracker 
+#
+# (2) Enable Windows Shutdown Event Tracker 
 #
 # @example
 #   include profile::baseline::windows::qol_settings
 class profile::baseline::windows::qol_settings {
+
     registry_value { 'HKLM\Software\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}\IsInstalled':
       ensure => present,
       type   => dword,
@@ -41,4 +42,5 @@ class profile::baseline::windows::qol_settings {
       type   => dword,
       data   => 1,
     }
+
 }
