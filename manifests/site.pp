@@ -29,7 +29,7 @@ $variable = 'set in site.pp'
 class basics4 {
   notify {"Variable is : ${::variable}": }
 }
-Basics4 {
+Notify {
   message => 'Default message',
 }
 node default {
