@@ -47,7 +47,7 @@ class basics4_child inherits basics4 {
 }
 
 node default {
-  $variable = 'node scope'
+  #$variable = 'node scope'
   # This is where you can declare classes for all nodes.ß
   include basics4
   Notify {
