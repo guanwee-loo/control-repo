@@ -33,6 +33,7 @@ Notify {
   message => 'Default message',
 }
 node default {
+  $variable = 'set in node'
   # This is where you can declare classes for all nodes.
   # Example:
   # class { 'basics4': }
