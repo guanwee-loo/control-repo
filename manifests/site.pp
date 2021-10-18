@@ -25,11 +25,11 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 
-$variable = 'top scope'
+#$variable = 'top scope'
 # Resource default in site.pp
-Notify {
-  message => "Resource default set in ${variable}",
-}
+#Notify {
+#  message => "Resource default set in ${variable}",
+#}
 
 class basics4 {
   $variable = 'class scope'
@@ -47,11 +47,11 @@ class basics4_child inherits basics4 {
 }
 
 node default {
-  #$variable = 'node scope'
+  $variable = 'node scope'
   # This is where you can declare classes for all nodes.ß
   include basics4
   Notify {
-    message => "Resource default set in ${basics4::variable}"
+    message => "Resource default set in ${variable}"
   }
   class { 'basics4_child': }
 }
