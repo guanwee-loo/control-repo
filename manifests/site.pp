@@ -29,6 +29,9 @@ $variable = 'set in site.pp'
 class basics4 {
   notify {"Variable is : ${::variable}": }
 }
+Basics4 {
+  message => 'Default message',
+}
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
