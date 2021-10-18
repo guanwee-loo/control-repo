@@ -25,15 +25,20 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 
-$variable = 'set in site.pp'
+$variable = 'set in site scope'
 class basics4 {
-  notify {"Variable is : ${::variable}": }
+
+  $variable = 'set in class scope'
+  notify {"Variable is : ${variable}": }
 }
-Notify {
-  message => 'Default message',
+class basics4_child inherits basics4 {
+  $variable = 'set in child scope'
 }
+#Notify {
+#  message => 'Default message',
+#}
 node default {
-  $variable = 'set in node'
+  $variable = 'set in node scope'
   # This is where you can declare classes for all nodes.
   # Example:
   # class { 'basics4': }
