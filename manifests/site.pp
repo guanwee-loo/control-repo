@@ -25,21 +25,33 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 
-$variable = 'set in site scope'
-class basics4 {
+$variable = 'top scope'
+# Resource default in site.pp
+Notify {
+  message => "Resource default set in ${variable}",
+}
 
-  $variable = 'set in class scope'
-  notify {"Variable is : ${variable}": }
+class basics4 {
+  $variable = 'class scope'
+  #Notify {
+  #  message => "Resource default set in ${variable}"
+  #}
+  notify { "Message set in ${variable}":
+  }
 }
 class basics4_child inherits basics4 {
-  $variable = 'set in child scope'
+  $variable = 'child scope'
+  notify { "Message set in ${variable}":
+  }
+  #debug ($variable)
 }
-#Notify {
-#  message => 'Default message',
-#}
+
 node default {
-  $variable = 'set in node scope'
-  # This is where you can declare classes for all nodes.
-  # Example:
-  # class { 'basics4': }
+  $variable = 'node scope'
+  # This is where you can declare classes for all nodes.ß
+  include basics4
+  Notify {
+    message => "Resource default set in ${basics4::variable}"
+  }
+  class { 'basics4_child': }
 }
