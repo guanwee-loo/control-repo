@@ -26,7 +26,7 @@ File { backup => false }
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 
 $variable = 'set in site.pp'
-class example {
+class basics4 {
   notify {"Variable is : ${::variable}": }
 }
 node default {
@@ -34,5 +34,3 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
-
-include example
