@@ -6,8 +6,6 @@
 #   include profile::installer::sevenzip
 class profile::installer::sevenzip {
 
-  include chocolatey
-
   package { '7zip':
     ensure          => installed,
     provider        => 'chocolatey',
