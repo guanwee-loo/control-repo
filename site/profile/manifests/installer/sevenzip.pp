@@ -6,10 +6,13 @@
 #   include profile::installer::sevenzip
 class profile::installer::sevenzip {
 
+  chocolateyfeature { 'allowglobalconfirmation':
+    ensure  => 'enabled',
+  }
   package { '7zip':
     ensure          => installed,
     provider        => 'chocolatey',
-    install_options => ['--exit-when-reboot-detected','-installArgs','"','/q'],
+    install_options => ['-installArgs','"','/S'],
     notify          => Reboot['after'],
   }
   reboot { 'after' :
