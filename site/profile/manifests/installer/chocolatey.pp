@@ -6,6 +6,6 @@
 #   include profile::installer::chocolatey
 class profile::installer::chocolatey {
 
-    include chocolatey
+    contain chocolatey
 
 }
