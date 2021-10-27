@@ -7,13 +7,13 @@
 class profile::installer::sevenzip {
 
   package { '7zip':
-    ensure   => installed,
-    provider => 'chocolatey',
-    notify   => Reboot['after'],
-
+    ensure          => installed,
+    provider        => 'chocolatey',
+    install_options => ['-installArgs','"','/qn']
+    notify          => Reboot['after'],
   }
   reboot { 'after' :
-    apply    => finished,
+    apply => finished,
   }
 
 }
