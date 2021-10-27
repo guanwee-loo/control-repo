@@ -9,7 +9,6 @@ class profile::installer::sevenzip {
   package { '7zip':
     ensure          => installed,
     provider        => 'chocolatey',
-    install_options => ['-installArgs','/qn'],
   }
   reboot { 'after' :
     subscribe => Package['7zip'],
