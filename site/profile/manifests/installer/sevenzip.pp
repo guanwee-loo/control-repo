@@ -9,7 +9,7 @@ class profile::installer::sevenzip {
   package { '7zip':
     ensure          => installed,
     provider        => 'chocolatey',
-    install_options => ['-installArgs','"','/qn'],
+    install_options => ['--exit-when-reboot-detected','-installArgs','"','/qn'],
     notify          => Reboot['after'],
   }
   reboot { 'after' :
