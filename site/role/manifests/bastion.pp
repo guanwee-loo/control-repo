@@ -12,9 +12,6 @@ class role::bastion {
   #}
   include profile::base
 
-  if $trusted['extensions']['pp_role'] == 'webserver' {
-    include profile::webserver
-  }
   notify { 'role message':
     message => lookup('role::bastion::message'),
   }

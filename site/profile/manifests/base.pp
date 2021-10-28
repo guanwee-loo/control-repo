@@ -5,12 +5,10 @@
 # @example
 #   include profile::base
 class profile::base (
-  $message #uses APL
+  $message #This uses Automatic Parameter Lookup
 ){
   notify { 'profile message':
     message => $message,
   }
-  include profile::server_baseline
-  include profile::install_baseline
 
 }
