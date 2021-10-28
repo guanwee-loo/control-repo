@@ -5,7 +5,7 @@
 # @example
 #   include profile::base
 class profile::base (
-  $message #This will use Automatic Parameter Lookup
+  $message = lookup('message')#This will use Automatic Parameter Lookup
 ){
   notify { $message: }
 }
