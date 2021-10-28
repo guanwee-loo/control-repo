@@ -7,10 +7,10 @@
 #   include role::bastion
 class role::bastion {
 
-  #class{ 'profile::base':
-  #  message => profile::message
-  #}
-  include profile::base
+  class{ 'profile::base':
+    message => lookup('message1')
+  }
+  #include profile::base
 
   notify { 'role message':
     message => lookup('role::bastion::message'),
