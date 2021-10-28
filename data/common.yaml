@@ -1,3 +1,2 @@
 ---
 message: 'This node is using environment common data'
-profile::base::message: 'Data from environment'
