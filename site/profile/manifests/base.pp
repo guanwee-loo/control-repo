@@ -6,6 +6,9 @@
 #   include profile::base
 class profile::base {
 
+  notify { 'profile message':
+    message => lookup(message,)
+  }
   include profile::server_baseline
   include profile::install_baseline
 
