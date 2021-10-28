@@ -4,10 +4,12 @@
 #
 # @example
 #   include profile::base
-class profile::base {
+class profile::base (
+  $message = lookup('profile::message')
+) {
 
   notify { 'profile message':
-    message => lookup('profile::message'),
+    message => $message,
   }
   include profile::server_baseline
   include profile::install_baseline
