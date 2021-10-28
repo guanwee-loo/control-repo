@@ -32,7 +32,7 @@ node default {
   #class { 'profile::base':
   #    message => lookup('message')
   #}
-  notify { 'site message':
-    message => lookup('message'),
-  }
+  #notify { 'site message':
+  #  message => lookup('message'),
+  #}
 }
