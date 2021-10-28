@@ -5,7 +5,7 @@
 # @example
 #   include profile::base
 class profile::base (
-  $message = lookup('profile::message')
+  $message = lookup('message')
 ) {
 
   notify { 'profile message':
