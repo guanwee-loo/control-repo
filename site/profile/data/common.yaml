@@ -1,2 +1,2 @@
 ---
-profile::base::message: 'Unencrypted Data from Module (profile) Layer'
+message: 'Unencrypted Data from Module (profile) Layer'
