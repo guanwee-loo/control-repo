@@ -1,2 +1,2 @@
 ---
-role::message: "This node is using common data in the component role layer"
+message: "This node is using common data in the component role layer"

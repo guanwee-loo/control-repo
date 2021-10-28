@@ -1,2 +1,2 @@
 ---
-role::message: "This node is using common data in the environment layer"
+message1: "This node is using common data in the environment layer"
