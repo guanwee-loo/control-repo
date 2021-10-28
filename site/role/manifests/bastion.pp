@@ -7,10 +7,10 @@
 #   include role::bastion
 class role::bastion {
 
-  class{ 'profile::base':
-    message => profile::message
-  }
-  #include profile::base
+  #class{ 'profile::base':
+  #  message => profile::message
+  #}
+  include profile::base
 
   if $trusted['extensions']['pp_role'] == 'webserver' {
     include profile::webserver

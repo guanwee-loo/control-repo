@@ -6,7 +6,7 @@
 #   include profile::base
 class profile::base (
   $message
-) {
+){
 
   notify { 'profile message':
     message => $message,
