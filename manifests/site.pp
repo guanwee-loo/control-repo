@@ -33,6 +33,6 @@ node default {
   #    message => lookup('message')
   #}
   notify { 'site message':
-    message => lookup('message'),
+    message => lookup('profile::base::message'),
   }
 }
