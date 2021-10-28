@@ -6,7 +6,7 @@ defaults:  # Used for any hierarchy level that omits these keys.
   data_hash: yaml_data  # Use the built-in YAML backend.
 
 hierarchy:
-  - name: "Common encrypted"
+  - name: "common encrypted"
     lookup_key: eyaml_lookup_key #eyaml backend
     paths:
       - "common.eyaml"
