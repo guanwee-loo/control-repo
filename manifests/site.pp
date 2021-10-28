@@ -29,8 +29,8 @@ node default {
   # Example:
   #   class { 'my_class': }
   #include profile::base
-  class {'profile::base':
-      message => lookup('message')
+  class { 'profile::base':
+      message => lookup('profile::base::message')
   }
   notify { 'site message':
     message => lookup('message'),
