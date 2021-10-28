@@ -7,8 +7,5 @@
 class profile::base (
   $message #This uses Automatic Parameter Lookup
 ){
-  notify { 'profile message':
-    message => $message,
-  }
-
+  notify { $message: }
 }

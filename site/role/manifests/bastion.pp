@@ -12,7 +12,4 @@ class role::bastion {
   #}
   include profile::base
 
-  notify { 'role message':
-    message => lookup('role::bastion::message'),
-  }
 }

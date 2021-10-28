@@ -1,2 +1,2 @@
 ---
-profile::base::message: "Data from component profile::base layer"
+profile::base::message: 'Data from Module (profile) Layer'

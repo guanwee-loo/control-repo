@@ -1,2 +1,2 @@
 ---
-role::bastion::message:  "Data from component role::bastion layer"
+role::bastion::message:  "Data from Module (role) Layer"
