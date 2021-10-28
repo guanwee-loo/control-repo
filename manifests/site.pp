@@ -32,5 +32,4 @@ node default {
   notify { 'site message':
     message => lookup('message'),
   }
-  
 }
