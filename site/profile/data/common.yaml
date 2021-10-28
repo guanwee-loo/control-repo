@@ -1,2 +1,2 @@
 ---
-profile::base::message: "This node is using common data in the component profile layer"
+profile::base::message: "Data from component profile::base layer"
