@@ -30,7 +30,7 @@ node default {
   #   class { 'my_class': }
   #include profile::base
   class { 'profile::base':
-      message => lookup('message')
+      message => lookup('profile::base::message')
   }
   notify { 'site message':
     message => lookup('profile::base::message'),
