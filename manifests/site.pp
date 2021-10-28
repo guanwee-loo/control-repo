@@ -29,6 +29,6 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { 'site message':
-    message => lookup('message1'),
+    message => lookup('role::message'),
   }
 }
