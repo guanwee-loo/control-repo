@@ -16,6 +16,6 @@ class role::bastion {
     include profile::webserver
   }
   notify { 'role message':
-    message => lookup('message'),
+    message => lookup('message1'),
   }
 }
