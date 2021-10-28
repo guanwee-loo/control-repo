@@ -5,9 +5,8 @@
 # @example
 #   include profile::base
 class profile::base (
-  $message
+  $message #uses APL
 ){
-
   notify { 'profile message':
     message => $message,
   }
