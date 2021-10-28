@@ -8,7 +8,7 @@
 class role::bastion {
 
   class{ 'profile::base':
-    message => lookup('message1')
+    message => lookup('message')
   }
   #include profile::base
 
