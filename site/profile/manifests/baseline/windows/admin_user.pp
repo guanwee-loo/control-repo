@@ -40,8 +40,9 @@ class profile::baseline::windows::admin_user {
     require                    => File[$script_location],
     purge                      => true,
     permissions                => [
-      { identity => $admin_user, rights  => ['full']},
-      { identity => $admin_group, rights => ['read','execute']}
+      { identity => 'Administrators', rights => ['full'] },
+      { identity => $admin_user, rights  => ['full'] },
+      { identity => $admin_group, rights => ['read','execute'] }
     ],
     inherit_parent_permissions => 'false',
   }
