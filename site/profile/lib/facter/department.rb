@@ -5,7 +5,7 @@ Facter.add(:department) do
   setcode do
     hostname=Facter.value(:hostname)
     dept=hostname.chars.first ?  
-         hostname.chars.first : 
+         hostname.chars.first.downcase : 
          'unknown'
     case 
     when 'b'
