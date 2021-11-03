@@ -41,16 +41,14 @@ class profile::baseline::windows::qol_settings {
     registry_key { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability':
       ensure => present,
     }
-    registry_value { 'ShutdownReasonOn':
+    registry_value { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
       ensure   => present,
-      key      => 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability',
       type     => dword,
       data     => 1,
       requires => Registry_key['HKLM\Software\Policies\Microsoft\Windows NT\Reliability'],
     }
-    registry_value { 'ShutdownReasonUI':
+    registry_value { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
       ensure   => present,
-      key      => 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability',
       type     => dword,
       data     => 1,
       requires => Registry_key['HKLM\Software\Policies\Microsoft\Windows NT\Reliability'],
