@@ -38,19 +38,20 @@ class profile::baseline::windows::qol_settings {
       data   => 'about:blank',
     }
     # Following to enable Shutdown Event UI
-    registry_key { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability':
+    $shutdown_reg_parent_key = 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability'
+    registry_key { $shutdown_reg_parent_key:
       ensure => present,
     }
-    registry_value { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
+    registry_value { "${shutdown_reg_parent_key}\ShutdownReasonOn":
       ensure  => present,
       type    => dword,
       data    => 1,
-      require => Registry_key['HKLM\Software\Policies\Microsoft\Windows NT\Reliability'],
+      require => Registry_key[$shutdown_reg_parent_key],
     }
-    registry_value { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
+    registry_value { "${shutdown_reg_parent_key}\ShutdownReasonUI":
       ensure  => present,
       type    => dword,
       data    => 1,
-      require => Registry_key['HKLM\Software\Policies\Microsoft\Windows NT\Reliability'],
+      require => Registry_key[$shutdown_reg_parent_key],
     }
 }
