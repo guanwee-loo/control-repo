@@ -42,7 +42,7 @@ class profile::baseline::windows::qol_settings {
       ensure => present,
     }
     registry_value { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
-      ensur   => present,
+      ensure  => present,
       type    => dword,
       data    => 1,
       require => Registry_key['HKLM\Software\Policies\Microsoft\Windows NT\Reliability'],
