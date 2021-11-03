@@ -1,5 +1,5 @@
 ---
-users:
+profile::baseline::windows::department_user::users:
   - Professor X
   - Phoenix
   - Cyclops
@@ -20,7 +20,7 @@ users:
   - Cloak
   - Northstar
   - Juggernaut
-password: >
+profile::baseline::windows::department_user::password: >
   ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBAD
   AFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEApUz5RpP7+lFTcNSSGS0ci+oXJy
   TEr4jPcteUjd0xCfqD//7KZtM/wytRDPoO6HPh5mmG9eCGpIKfUo5NcJ+ViU

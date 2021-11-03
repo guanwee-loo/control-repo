@@ -1,5 +1,5 @@
 ---
-users: 
+profile::baseline::windows::department_user::users: 
   - Captain America
   - Iron Man
   - Thor
@@ -20,7 +20,7 @@ users:
   - Star Lord
   - Gamora
   - Rocket
-password: >
+profile::baseline::windows::department_user::password: >
   ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBAD
   AFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEApUz5RpP7+lFTcNSSGS0ci+oXJy
   TEr4jPcteUjd0xCfqD//7KZtM/wytRDPoO6HPh5mmG9eCGpIKfUo5NcJ+ViU
