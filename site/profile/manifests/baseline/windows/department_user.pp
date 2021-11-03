@@ -4,7 +4,7 @@
 # @example
 #   include profile::baseline::windows::department_user
 class profile::baseline::windows::department_user {
-    profile::profile::managed_user { lookup('users'):
-      password => lookup('password'),
+    profile::profile::managed_user { lookup('::users'):
+      password => lookup('::password'),
     }
 }
