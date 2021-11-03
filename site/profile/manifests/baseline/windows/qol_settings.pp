@@ -37,16 +37,22 @@ class profile::baseline::windows::qol_settings {
       type   => string,
       data   => 'about:blank',
     }
-    registry::value { 'ShutdownReasonOn':
+    # Following to enable Shutdown Event UI
+    registry_key { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability':
       ensure => present,
-      key    => 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability',
-      type   => dword,
-      data   => 1,
     }
-    registry::value { 'ShutdownReasonUI':
-      ensure => present,
-      key    => 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability',
-      type   => dword,
-      data   => 1,
+    registry_value { 'ShutdownReasonOn':
+      ensure   => present,
+      key      => 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability',
+      type     => dword,
+      data     => 1,
+      requires => Registry_key['HKLM\Software\Policies\Microsoft\Windows NT\Reliability'],
+    }
+    registry_value { 'ShutdownReasonUI':
+      ensure   => present,
+      key      => 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability',
+      type     => dword,
+      data     => 1,
+      requires => Registry_key['HKLM\Software\Policies\Microsoft\Windows NT\Reliability'],
     }
 }
