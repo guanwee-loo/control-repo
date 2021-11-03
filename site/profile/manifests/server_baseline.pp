@@ -10,10 +10,10 @@ class profile::server_baseline {
     'windows': {
       include profile::baseline::windows::admin_user
       include profile::baseline::windows::qol_settings
+      include profile::baseline::windows::department_user
     }
     default: {
       fail('Unsupported for now')
     }
   }
-
 }

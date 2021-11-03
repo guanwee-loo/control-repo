@@ -3,11 +3,9 @@
 Facter.add(:department) do
   # https://puppet.com/docs/puppet/latest/fact_overview.html
   setcode do
-    hostname=Facter.value(:hostname)
-    dept=hostname.chars.first ?  
-         hostname.chars.first.downcase : 
-         'unknown'
-    case 
+    hostname = Facter.value(:hostname)
+    dept = hostname[0] ? hostname[0].downcase : 'unknown'
+    case dept
     when 'b'
       'banking'
     when 'r'

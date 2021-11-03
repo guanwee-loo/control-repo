@@ -42,13 +42,13 @@ class profile::baseline::windows::qol_settings {
     registry_key { $shutdown_reg_parent_key:
       ensure => present,
     }
-    registry_value { "${shutdown_reg_parent_key}\ShutdownReasonOn":
+    registry_value { "${shutdown_reg_parent_key}\\ShutdownReasonOn" :
       ensure  => present,
       type    => dword,
       data    => 1,
       require => Registry_key[$shutdown_reg_parent_key],
     }
-    registry_value { "${shutdown_reg_parent_key}\ShutdownReasonUI":
+    registry_value { "${shutdown_reg_parent_key}\\ShutdownReasonUI" :
       ensure  => present,
       type    => dword,
       data    => 1,
