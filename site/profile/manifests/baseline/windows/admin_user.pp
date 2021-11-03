@@ -38,6 +38,7 @@ class profile::baseline::windows::admin_user {
 
   acl {$script_location:
     require                    => File[$script_location],
+    purge                      => true,
     permissions                => [
       { identity => $admin_user, rights  => ['full']},
       { identity => $admin_group, rights => ['read','execute']}
