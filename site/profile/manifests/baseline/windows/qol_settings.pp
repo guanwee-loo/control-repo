@@ -37,13 +37,13 @@ class profile::baseline::windows::qol_settings {
       type   => string,
       data   => 'about:blank',
     }
-    registry_value { 'ShutdownReasonOn':
+    registry::value { 'ShutdownReasonOn':
       ensure => present,
       key    => 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability',
       type   => dword,
       data   => 1,
     }
-    registry_value { 'ShutdownReasonUI':
+    registry::value { 'ShutdownReasonUI':
       ensure => present,
       key    => 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability',
       type   => dword,
