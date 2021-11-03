@@ -8,9 +8,9 @@ define profile::managed_user (
   $password,
 ) {
   user { $title:
-    ensure      => present,
-    password    => $password,
-    managedhome => true,
+    ensure     => present,
+    password   => $password,
+    managehome => true,
   }
 
 }
