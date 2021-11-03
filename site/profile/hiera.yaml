@@ -19,7 +19,7 @@ hierarchy:
       - "os/%{facts.os.family}.yaml"
   - name: "Department User"
     paths:
-      - "department/%{facts.department}.yaml"
+      - "department/%{facts.department}/user.yaml"
   - name: "software"
     paths:
       - "software/mobaxterm.yaml"
