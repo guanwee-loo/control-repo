@@ -6,7 +6,7 @@
 # @example
 #   include profile::installer::sevenzip
 class profile::installer::sevenzip (
-  Boolean $class_noop                     = noop::true_unless_no_noop(),
+  Boolean $class_noop   = false, #default to enforcement
 ) {
 
   noop($class_noop)
