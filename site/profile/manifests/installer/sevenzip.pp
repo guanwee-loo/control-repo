@@ -19,7 +19,7 @@ class profile::installer::sevenzip (
     notify   => Reboot['after'],
   }
 
-  noop(true)
+  noop($reboot)
 
   reboot { 'after' :
     apply => finished,
