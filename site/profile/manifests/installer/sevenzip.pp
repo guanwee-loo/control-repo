@@ -15,6 +15,7 @@ class profile::installer::sevenzip (
   }
   package { '7zip':
     ensure   => installed,
+    name     => '7zip',
     provider => 'chocolatey',
     notify   => Reboot['after'],
   }
