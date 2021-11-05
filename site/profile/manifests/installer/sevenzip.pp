@@ -19,7 +19,7 @@ class profile::installer::sevenzip (
     notify   => Reboot['after'],
   }
   notify { 'reboot':
-    message => $reboot,
+    message => "Here's my message ${reboot}",
   }
   noop($reboot)
 
