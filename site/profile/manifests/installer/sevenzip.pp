@@ -6,7 +6,7 @@
 # @example
 #   include profile::installer::sevenzip
 class profile::installer::sevenzip (
-    Boolean $reboot   = str2bool(lookup('reboot'))
+    Boolean $reboot   = lookup('reboot')
 ) {
 
   chocolateyfeature { 'allowglobalconfirmation':
@@ -18,10 +18,9 @@ class profile::installer::sevenzip (
     provider => 'chocolatey',
     notify   => Reboot['after'],
   }
-  notify { 'reboot':
-    message => "Here's my message ${reboot}",
-  }
-  noop($reboot)
+
+  $noop = !$reboot
+  noop($noop)
 
   reboot { 'after' :
     apply => finished,

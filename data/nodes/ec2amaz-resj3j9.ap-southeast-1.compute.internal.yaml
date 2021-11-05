@@ -1,2 +1,2 @@
 ---
-reboot: "false"
+reboot: false # Set this flag here for each node which is out of "build" phase
