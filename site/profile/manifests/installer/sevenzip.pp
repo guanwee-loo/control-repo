@@ -6,7 +6,7 @@
 # @example
 #   include profile::installer::sevenzip
 class profile::installer::sevenzip (
-  Boolean $reboot   = false, #default to enforcement
+  Boolean $reboot   = lookup('reboot')
 ) {
 
   chocolateyfeature { 'allowglobalconfirmation':
