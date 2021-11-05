@@ -6,10 +6,9 @@
 # @example
 #   include profile::installer::sevenzip
 class profile::installer::sevenzip (
-  Boolean $class_noop   = false, #default to enforcement
+  Boolean $reboot   = false, #default to enforcement
 ) {
 
-  noop($class_noop)
   chocolateyfeature { 'allowglobalconfirmation':
     ensure  => 'enabled',
   }
@@ -19,6 +18,9 @@ class profile::installer::sevenzip (
     provider => 'chocolatey',
     notify   => Reboot['after'],
   }
+
+  noop($reboot)
+
   reboot { 'after' :
     apply => finished,
   }
