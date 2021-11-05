@@ -5,8 +5,12 @@
 # and hence we need to enable the Chocolatey "allowglobalconfirmation"
 # @example
 #   include profile::installer::sevenzip
-class profile::installer::sevenzip {
+class profile::installer::sevenzip (
+  Boolean $class_noop                     = noop::true_unless_no_noop(),
+  Optional[Boolean] $class_noop_override  = undef,
+) {
 
+  noop::class_interface()
   chocolateyfeature { 'allowglobalconfirmation':
     ensure  => 'enabled',
   }
