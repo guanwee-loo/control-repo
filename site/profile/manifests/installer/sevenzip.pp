@@ -9,7 +9,7 @@ class profile::installer::sevenzip (
   Boolean $class_noop   = false, #default to enforcement
 ) {
 
-  #noop($class_noop)
+  noop($class_noop)
   chocolateyfeature { 'allowglobalconfirmation':
     ensure  => 'enabled',
   }
@@ -23,5 +23,5 @@ class profile::installer::sevenzip (
     apply => finished,
   }
 
-  #noop(undef)
+  noop(undef)
 }
