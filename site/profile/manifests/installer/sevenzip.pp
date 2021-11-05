@@ -3,10 +3,12 @@
 # Install the latest 7Zip and reboot the server post installation
 # The 7Zip installer will wait for a confirmation prompt before installing
 # and hence we need to enable the Chocolatey "allowglobalconfirmation"
+# Set the parameter "reboot_allowed" to indicate whether reboot is allowed.
+#  This is useful when the server is not in "build" phase so Puppet reboot is forbidden.
 # @example
 #   include profile::installer::sevenzip
 class profile::installer::sevenzip (
-    Boolean $reboot   = lookup('reboot')
+    Boolean $reboot_allowed   = lookup('reboot_allowed')
 ) {
 
   chocolateyfeature { 'allowglobalconfirmation':
@@ -19,7 +21,7 @@ class profile::installer::sevenzip (
     notify   => Reboot['after'],
   }
 
-  $noop = !$reboot
+  $noop = !$reboot_allowed
   noop($noop)
 
   reboot { 'after' :
