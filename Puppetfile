@@ -19,6 +19,13 @@ mod 'trlinkin-noop', '1.1.1'
 # Windows DSC..
 mod 'dsc-csecurityoptions', '3.1.3-0-0'
 
+# mongodb   
+mod 'puppet-mongodb', '4.1.0'
+mod 'puppet-systemd', '3.5.1'
+mod 'puppetlabs-inifile', '5.2.0'
+mod 'puppet-zypprepo', '4.0.1'
+mod 'puppetlabs-concat','7.1.1'
+mod 'puppetlabs-apt', '8.3.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
