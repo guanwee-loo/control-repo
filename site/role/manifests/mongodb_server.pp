@@ -4,9 +4,13 @@
 #
 # @example
 #   include role::mongodb_server
-class role::mongodb_server {
+class role::mongodb_server (
+  $admin_username,
+  $admin_password,
+){
   class {'mongodb::server':
     create_admin   => true,
-    admin_username => 'admin',
+    admin_username => $admin_username,
+    admin_password => $admin_password,
   }
 }

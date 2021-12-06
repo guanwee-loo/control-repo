@@ -17,5 +17,12 @@ hierarchy:
     paths:
       - "os/%{facts.os.name}.yaml"
       - "os/%{facts.os.family}.yaml"
+  - name: "databases"
+    lookup_key: eyaml_lookup_key #eyaml backend
+    paths:
+      - "scb/mongodb/config.eyaml"
+    options:
+      pkcs7_private_key: /etc/puppetlabs/puppet/eyaml/private_key.pkcs7.pem
+      pkcs7_public_key:  /etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem 
   - name: 'common'
     path: 'common.yaml'

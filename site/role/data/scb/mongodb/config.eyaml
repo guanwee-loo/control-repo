@@ -1,0 +1,13 @@
+---
+role::mongodb_server::admin_username: admin
+role::mongodb_server::admin_password: >
+  ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBAD
+  AFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAkU5ACVu20co0GsDvYe3/7RUDsA
+  v9GD0Y6vg7F0pTTiFhktAPwYPfm3RogzkTc3ptQ0nhl+5ss3zbCzw+HZTy/v
+  Yxm/ons20+vzu2/DHlzYkZ2N17v7Utu1JJP9eu2sBgMKbQL0CeqcYwKvkPEq
+  5eLmAGebdYjUVeAWn0YSQo6E8U08MsBmtlUFrPDLwKOaLuUSy5RlmNrTfBVY
+  BxSpU7RbrNkzz0H/4c4xHOzlVQCtdL2udB5vgc4QRrnL4Gu0Ab//HWEBqzTB
+  FYRvbKXuSzH+T/uUvWP+zRhowIQUhYVGLSt+dvHfhV9r+uas1Ov5KNGkgRSc
+  jCdm9nWoVU4vnQVzBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBk/HL2/S
+  is/Hv19zCc3YOvgCAVTW2wT0/RET9xrzcPXQ3odySG0w/67X6b2DZBHCS0lw
+  ==]
