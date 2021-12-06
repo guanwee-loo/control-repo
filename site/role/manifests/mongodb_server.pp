@@ -9,6 +9,7 @@ class role::mongodb_server (
   $admin_password,
 ){
   class {'mongodb::server':
+    auth           => false,
     create_admin   => true,
     admin_username => $admin_username,
     admin_password => $admin_password,
