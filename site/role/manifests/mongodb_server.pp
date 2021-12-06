@@ -14,4 +14,5 @@ class role::mongodb_server (
     admin_username => $admin_username,
     admin_password => $admin_password,
   }
+  -> class {'mongodb::client': }
 }
