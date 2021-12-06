@@ -29,7 +29,7 @@ mod 'puppetlabs-apt', '8.3.0'
 mod 'dylanratcliffe-facter_cache', '1.3.1'
 
 mod 'scb_mongo_ura',
-  :git    => 'git@github.com:guanwee-loo/scb_mongo_ura.git',
+  :git    => 'https://github.com/guanwee-loo/scb_mongo_ura.git',
   :branch => 'gw_shadow'
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
