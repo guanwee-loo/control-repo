@@ -7,7 +7,7 @@
 class role::mongodb_server (
   $admin_username,
   $admin_password,
-  $version = '4.2.15-1',
+  $version = '4.2.15',
 ){
   class {'mongodb::globals':
     manage_package_repo => true,
