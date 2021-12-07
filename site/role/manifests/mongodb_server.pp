@@ -26,5 +26,10 @@ class role::mongodb_server (
     user     => 'user1',
     password => $admin_password,
   }
-  class {'mongodb::opsmanager': }
+  class { 'mongodb::opsmanager': }
+
+  package { "mongodb-org-tools-${version}":
+    ensure  => installed,
+    require => Class['mongodb::globals'],
+  }
 }
