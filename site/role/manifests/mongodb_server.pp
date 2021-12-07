@@ -7,7 +7,13 @@
 class role::mongodb_server (
   $admin_username,
   $admin_password,
+  $version = '4.2',
 ){
+  class {'mongodb::globals':
+    manage_package_repo => true,
+    version             => $version,
+    before              => Class['mongodb::server'],
+  }
   class {'mongodb::server':
     create_admin   => true,
     admin_username => $admin_username,
@@ -16,6 +22,7 @@ class role::mongodb_server (
   class {'mongodb::client': }
 
   mongodb::db {'testdb':
+    require  => Class['mongodb::server'],
     user     => 'user1',
     password => $admin_password,
   }
