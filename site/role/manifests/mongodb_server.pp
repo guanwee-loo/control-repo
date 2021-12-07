@@ -26,4 +26,5 @@ class role::mongodb_server (
     user     => 'user1',
     password => $admin_password,
   }
+  class {'mongodb::opsmanager': }
 }
