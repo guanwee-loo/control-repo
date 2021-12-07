@@ -5,28 +5,14 @@
 # @example
 #   include role::mongodb_server
 class role::mongodb_server (
-  $admin_username,
-  $admin_password,
-  $version = '4.2.15',
+  $version,
 ){
   class {'mongodb::globals':
     manage_package_repo => true,
     version             => $version,
-    before              => Class['mongodb::server'],
   }
-  class {'mongodb::server':
-    create_admin   => true,
-    admin_username => $admin_username,
-    admin_password => $admin_password,
-  }
-  class {'mongodb::client': }
-
-  mongodb::db {'testdb':
-    require  => Class['mongodb::server'],
-    user     => 'user1',
-    password => $admin_password,
-  }
-  class { 'mongodb::opsmanager': }
+  -> class {'mongodb::server': }
+  -> class {'mongodb::client': }
 
   package { "mongodb-org-tools-${version}":
     ensure  => installed,
