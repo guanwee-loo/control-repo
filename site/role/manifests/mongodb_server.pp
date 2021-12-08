@@ -1,6 +1,6 @@
-# @summary A short summary of the purpose of this class
+# @summary Setup a vanilla mongodb server
 #
-# A description of what this class does
+# Install a default mongodb instance along with the client and db tools
 #
 # @example
 #   include role::mongodb_server

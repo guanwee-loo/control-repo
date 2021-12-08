@@ -1,4 +1,5 @@
 ---
+role::mongodb_server::version: 4.2.15
 role::mongodb_server::admin_username: admin
 role::mongodb_server::admin_password: >
   ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBAD
