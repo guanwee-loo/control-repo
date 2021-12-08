@@ -1,7 +1,7 @@
 # @summary Setup a vanilla mongodb server
 #
-# Install a default mongodb instance along with the client and db tools
-#
+# Install a default mongodb instance along with the client and the db tools.
+# $version is determined by automatic parameter lookup
 # @example
 #   include role::mongodb_server
 class role::mongodb_server (
