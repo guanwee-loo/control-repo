@@ -1,5 +1,2 @@
 ---
-ad: false #disable AD authentication
-mongoprefix: su - centos -c
-mongo__cmd: mongo
-mongopostfix:
+ad: 'false' #disable AD authentication for test environment
