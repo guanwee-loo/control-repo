@@ -28,6 +28,7 @@ mod 'puppetlabs-concat','7.1.1'
 mod 'puppetlabs-apt', '8.3.0'
 mod 'dylanratcliffe-facter_cache', '1.3.1'
 
+# mongodb
 mod 'scb_mongo_ura',
   :git    => 'git@github.com:guanwee-loo/scb_mongo_ura.git',
   :branch => 'gw_shadow'
