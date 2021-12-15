@@ -36,7 +36,7 @@ mod 'scb_mongo_ura',
 # postgresql
 mod 'puppetlabs-postgresql', '7.5.0'
 mod 'scb_postgresql_ura',
-  :git    => 'https://github.com/guanwee-loo/scb_postgresql_ura.git',
+  :git    => 'git@github.com:guanwee-loo/scb_postgresql_ura.git',
   :branch => 'gw_shadow'
 
 # Modules from Git
