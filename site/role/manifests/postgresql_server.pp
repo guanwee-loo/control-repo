@@ -8,7 +8,6 @@ class role::postgresql_server (
   $version,
 ){
   class { 'postgresql::globals':
-    manage_package_repo => true,
     version             => String($version),
   }
   class { 'postgresql::server': }
