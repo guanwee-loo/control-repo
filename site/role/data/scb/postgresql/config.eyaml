@@ -1,2 +1,2 @@
 ---
-role::postgresql_server::version: 12.7
+role::postgresql_server::version: 12

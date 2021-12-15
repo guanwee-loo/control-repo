@@ -9,7 +9,7 @@ class role::postgresql_server (
 ){
   class { 'postgresql::globals':
     manage_package_repo => true,
-    version             => $version,
+    String[1] version   => $version,
   }
   class { 'postgresql::server': }
 }
