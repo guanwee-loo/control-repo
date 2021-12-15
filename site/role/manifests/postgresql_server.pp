@@ -5,11 +5,11 @@
 # @example
 #   include role::postgresql_server
 class role::postgresql_server (
-  String[1] $version,
+  $version,
 ){
   class { 'postgresql::globals':
     manage_package_repo => true,
-    version   => $version,
+    version             => $version,
   }
   class { 'postgresql::server': }
 }
