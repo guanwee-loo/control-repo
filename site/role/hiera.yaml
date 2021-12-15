@@ -21,6 +21,7 @@ hierarchy:
     lookup_key: eyaml_lookup_key #eyaml backend
     paths:
       - "scb/mongodb/config.eyaml"
+      - "scb/postgresql/config.eyaml"
     options:
       pkcs7_private_key: /etc/puppetlabs/puppet/eyaml/private_key.pkcs7.pem
       pkcs7_public_key:  /etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem 
