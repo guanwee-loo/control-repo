@@ -10,7 +10,8 @@ class role::postgresql_server (
 
   #https://noobient.com/2019/11/26/postgresql-on-centos-8-and-rhel-8/
   exec { 'dnf -y module disable postgresql':
-    creates => '/tmp/disablepostgresql',
+    cwd     => '/var/tmp',
+    creates => '/var/tmp/disablepostgresql',
     path    => ['/usr/bin'],
     before  => Class['postgresql::globals'],
   }
