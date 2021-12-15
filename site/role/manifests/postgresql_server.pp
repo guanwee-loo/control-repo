@@ -9,17 +9,16 @@ class role::postgresql_server (
 ){
 
   #https://noobient.com/2019/11/26/postgresql-on-centos-8-and-rhel-8/
-  exec { 'dnf --disablerepo AppStream':
-    creates => '/tmp/disablerepo',
+  exec { 'dnf -y module disable postgresql':
+    creates => '/tmp/disablepostgresql',
     path    => ['/usr/bin'],
     before  => Class['postgresql::globals'],
-
   }
   class { 'postgresql::globals':
     manage_package_repo => true,
     version             => String($version),
   }
-  class { 'postgresql::server': 
+  class { 'postgresql::server':
     require => Class['postgresql::globals'],
   }
 }
