@@ -12,7 +12,6 @@ mod 'puppetlabs-acl', '4.0.0'
 mod 'puppetlabs-registry', '4.0.1'
 mod 'puppetlabs-chocolatey', '6.0.1'
 mod 'puppetlabs-powershell', '5.0.0'
-mod 'puppetlabs-stdlib', '8.1.0'
 mod 'puppet-archive', '6.0.1'
 mod 'puppetlabs-reboot', '4.1.0'
 mod 'trlinkin-noop', '1.1.1'
@@ -24,9 +23,18 @@ mod 'puppet-mongodb', '4.1.0'
 mod 'puppet-systemd', '3.5.1'
 mod 'puppetlabs-inifile', '5.2.0'
 mod 'puppet-zypprepo', '4.0.1'
+mod 'dylanratcliffe-facter_cache', '1.3.1'
+
+mod 'puppetlabs-cd4pe', '3.2.1'
+#Requirements for cd4pe
+mod 'puppetlabs-stdlib', '8.1.0'
+mod 'puppetlabs-puppet_authorization', '0.5.1'
+mod 'puppetlabs-hocon', '1.1.0'
 mod 'puppetlabs-concat','7.1.1'
 mod 'puppetlabs-apt', '8.3.0'
-mod 'dylanratcliffe-facter_cache', '1.3.1'
+mod 'puppetlabs-translate', '2.2.0'
+mod 'puppetlabs-cd4pe_jobs', '1.5.0'
+
 
 # mongodb
 mod 'scb_mongo_ura',
@@ -38,6 +46,8 @@ mod 'puppetlabs-postgresql', '7.5.0'
 mod 'scb_postgresql_ura',
   :git    => 'git@github.com:guanwee-loo/scb_postgresql_ura.git',
   :branch => 'gw_shadow'
+
+
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
