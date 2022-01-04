@@ -3,3 +3,4 @@ ad: 'false' #disable AD authentication for test environment
 mongoprefix: 'su - centos -c'
 mongo__cmd: 'mongo'
 mongopostfix: ''
+environ: 'test'
