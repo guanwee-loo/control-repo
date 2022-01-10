@@ -31,7 +31,7 @@ mod 'dylanratcliffe-facter_cache', '1.3.1'
 # db2
 mod 'scb_db2_ura',
   :git    => 'git@github.com:guanwee-loo/scb_db2_ura.git',
-  :branch => 'dev_sooyean'
+  :branch => 'dev_guanwee'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
