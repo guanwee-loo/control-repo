@@ -31,8 +31,8 @@ mod 'dylanratcliffe-facter_cache', '1.3.1'
 # postgresql
 #mod 'puppetlabs-postgresql', '7.5.0'
 mod 'scb_oracle_ura',
-  :git    => 'git@github.com:guanwee-loo/scb_oracle_ura_poc.git',
-  :branch => 'master_archive20220113'
+  :git    => 'git@github.com:guanwee-loo/scb_oracle_ura.git',
+  :branch => 'dev_guanwee'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
