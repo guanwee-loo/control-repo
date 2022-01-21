@@ -8,9 +8,9 @@ class profile::install_baseline {
 
   case $facts['kernel'] {
     'windows': {
-      include profile::installer::mobaxterm
+#      include profile::installer::mobaxterm
       include profile::installer::chocolatey
-      include profile::installer::sevenzip
+#      include profile::installer::sevenzip
     }
     default: {
       fail('Unsupported for now')
