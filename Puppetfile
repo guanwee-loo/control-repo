@@ -39,13 +39,13 @@ mod 'puppetlabs-cd4pe_jobs', '1.5.0'
 # mongodb
 mod 'scb_mongo_ura',
   :git    => 'git@github.com:guanwee-loo/scb_mongo_ura.git',
-  :branch => 'gw_shadow'
+  :branch => 'dev_guanwee'
 
 # postgresql
-mod 'puppetlabs-postgresql', '7.5.0'
-mod 'scb_postgresql_ura',
-  :git    => 'git@github.com:guanwee-loo/scb_postgresql_ura.git',
-  :branch => 'gw_shadow'
+#mod 'puppetlabs-postgresql', '7.5.0'
+#mod 'scb_postgresql_ura',
+#  :git    => 'git@github.com:guanwee-loo/scb_postgresql_ura.git',
+#  :branch => 'gw_shadow'
 
 
 
