@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-requires 'json'
+require 'json'
 Facter.add(:users) do
   # https://puppet.com/docs/puppet/latest/fact_overview.html
   setcode do
