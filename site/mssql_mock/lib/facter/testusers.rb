@@ -5,7 +5,7 @@ Facter.add(:users) do
   setcode do
 '{
   "users" : {
-    "sqladmin1": {
+    "kiosk_test": {
         "comment"   : "comment1",
         "user_type" : "usertype1"
     },
