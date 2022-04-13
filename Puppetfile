@@ -33,7 +33,7 @@ mod 'dylanratcliffe-facter_cache', '1.3.1'
 mod 'scb_oracle_ura',
  :git    => 'git@github.com:guanwee-loo/scb_oracle_ura.git',
 # :git => 'https://github.com/puppetlabs/scb_oracle_ura.git', 
- :branch => 'issue61'
+ :branch => 'main'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
