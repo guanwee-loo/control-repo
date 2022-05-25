@@ -32,8 +32,8 @@ mod 'dylanratcliffe-facter_cache', '1.3.1'
 mod 'puppetlabs-postgresql', '7.5.0'
 mod 'scb_postgresql_ura',
   git:     'git@github.com:guanwee-loo/scb_postgresql_ura.git',
-  commit: '0f9dc925845c18253e44502a02c203f158171663'
-  #branch:  'dev_guanwee'
+  #commit: '0f9dc925845c18253e44502a02c203f158171663'
+  branch:  'main'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
