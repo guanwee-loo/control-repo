@@ -33,7 +33,7 @@ mod 'puppetlabs-hocon', '1.1.0'
 mod 'puppetlabs-concat','7.1.1'
 mod 'puppetlabs-apt', '8.3.0'
 mod 'puppetlabs-translate', '2.2.0'
-mod 'puppetlabs-cd4pe_jobs', '1.5.0'
+mod 'puppetlabs-cd4pe_jobs', '1.6.0'
 
 
 # mongodb
