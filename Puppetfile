@@ -37,7 +37,6 @@ mod 'scb_postgresql_ura',
 
 #For comply
 mod 'puppetlabs-comply', '2.5.0'
-mod 'puppetlabs-inifile', '5.3.0'
 mod 'puppetlabs-java', '8.1.0'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
