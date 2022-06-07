@@ -28,6 +28,14 @@ mod 'puppetlabs-apt', '8.3.0'
 mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-cd4pe_jobs', '1.6.0'
 
+
+#For comply
+mod 'puppetlabs-comply', '2.5.0'
+mod 'puppetlabs-inifile', '5.3.0'
+mod 'puppetlabs-java', '8.1.0'
+mod 'puppetlabs-ruby_task_helper', '0.6.1'
+
+
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
 #mod 'apache',
