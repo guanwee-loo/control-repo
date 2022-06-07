@@ -35,6 +35,12 @@ mod 'scb_postgresql_ura',
   #commit: '0f9dc925845c18253e44502a02c203f158171663'
   branch:  'main'
 
+#For comply
+mod 'puppetlabs-comply', '2.5.0'
+mod 'puppetlabs-inifile', '5.3.0'
+mod 'puppetlabs-java', '8.1.0'
+mod 'puppetlabs-ruby_task_helper', '0.6.1
+
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
 #mod 'apache',
