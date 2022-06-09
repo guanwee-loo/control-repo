@@ -2,43 +2,22 @@ forge 'https://forge.puppet.com'
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
-mod 'puppetlabs-support_tasks', '2.0.0'
-mod 'danieldreier-autosign', '0.3.0'
-#mod 'puppetlabs/stdlib', '6.6.0'
-mod 'puppetlabs-bootstrap', '2.1.0'
-mod 'puppetlabs-iis', '8.0.3'
-mod 'puppetlabs-pwshlib', '0.10.1'
-mod 'puppetlabs-acl', '4.0.0'
-mod 'puppetlabs-registry', '4.0.1'
-mod 'puppetlabs-chocolatey', '6.0.1'
-mod 'puppetlabs-powershell', '5.0.0'
 mod 'puppetlabs-stdlib', '8.1.0'
-mod 'puppet-archive', '6.0.1'
-mod 'puppetlabs-reboot', '4.1.0'
-mod 'trlinkin-noop', '1.1.1'
-# Windows DSC..
-mod 'dsc-csecurityoptions', '3.1.3-0-0'
-
-# mongodb   
-mod 'puppet-mongodb', '4.1.0'
+mod 'puppetlabs-concat', '6.4.0'
+mod 'puppetlabs-puppet_agent', '4.0.0'
 mod 'puppet-systemd', '3.5.1'
 mod 'puppetlabs-inifile', '5.2.0'
-mod 'puppet-zypprepo', '4.0.1'
 mod 'puppetlabs-concat','7.1.1'
-mod 'puppetlabs-apt', '8.3.0'
-mod 'dylanratcliffe-facter_cache', '1.3.1'
+mod 'puppet-firewalld', '4.4.0'
+mod 'puppet-selinux', '3.2.0'
+mod 'puppet-logrotate', '5.0.0'
+mod 'puppetlabs-augeas_core', '1.1.1'
 
-# postgresql
-mod 'puppetlabs-postgresql', '7.5.0'
-mod 'scb_postgresql_ura',
-  git:     'git@github.com:guanwee-loo/scb_postgresql_ura.git',
+#mod 'scb_postgresql_ura',
+#  git:     'git@github.com:guanwee-loo/scb_postgresql_ura.git',
   #commit: '0f9dc925845c18253e44502a02c203f158171663'
-  branch:  'main'
+#  branch:  'main'
 
-#For comply
-mod 'puppetlabs-comply', '2.5.0'
-mod 'puppetlabs-java', '8.1.0'
-mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
