@@ -16,7 +16,7 @@ mod 'puppetlabs-augeas_core', '1.1.1'
 mod 'puppetlabs-cem_linux',
   git:     'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
   #commit: '0f9dc925845c18253e44502a02c203f158171663'
-  tag:  '1.2.0'
+  tag:  'v1.2.0'
 
 
 # Modules from Git
