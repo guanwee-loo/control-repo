@@ -1,0 +1,6 @@
+cem_linux::benchmark: 'cis'
+cem_linux::config:
+  profile: 'server'
+  level: '1'
+  only:
+    - 'ensure_aide_is_installed'
