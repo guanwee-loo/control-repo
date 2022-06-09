@@ -3,11 +3,11 @@ forge 'https://forge.puppet.com'
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
 mod 'puppetlabs-stdlib', '8.1.0'
-mod 'puppetlabs-concat', '6.4.0'
 mod 'puppetlabs-puppet_agent', '4.0.0'
 mod 'puppet-systemd', '3.5.1'
 mod 'puppetlabs-inifile', '5.2.0'
 mod 'puppetlabs-concat','7.1.1'
+mod 'puppetlabs-firewall', '2.8.1'
 mod 'puppet-firewalld', '4.4.0'
 mod 'puppet-selinux', '3.2.0'
 mod 'puppet-logrotate', '5.0.0'
