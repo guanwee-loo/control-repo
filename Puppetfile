@@ -36,11 +36,24 @@ mod 'puppetlabs-java', '8.1.0'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
 
+
+
 #For CEM
 mod 'dsc-networkingdsc','8.2.0-0-3'
 mod 'dsc-auditpolicydsc','1.4.0-0-4'
 mod 'dsc-securitypolicydsc','2.10.0-0-3'
+mod 'puppetlabs-puppet_agent', '4.0.0'
+mod 'puppet-systemd', '3.5.1'
+mod 'puppetlabs-firewall', '2.8.1'
+mod 'puppet-firewalld', '4.4.0'
+mod 'puppet-selinux', '3.2.0'
+mod 'puppet-logrotate', '5.0.0'
+mod 'puppetlabs-augeas_core', '1.1.1'
 
+mod 'puppetlabs-cem_linux',
+  git:     'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
+  #commit: '0f9dc925845c18253e44502a02c203f158171663'
+  tag:  'v1.2.0'
 
 mod 'puppetlabs-cem_windows',
   git:     'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
