@@ -37,9 +37,9 @@ mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
 
 #For CEM
-mod 'dsc-networkingdsc','latest'
-mod 'dsc-auditpolicydsc','latest'
-mod 'dsc-securitypolicydsc','latest'
+mod 'dsc-networkingdsc','8.2.0-0-3'
+mod 'dsc-auditpolicydsc','1.4.0-0-4'
+mod 'dsc-securitypolicydsc','2.10.0-0-3'
 
 
 mod 'puppetlabs-cem_windowsx',
