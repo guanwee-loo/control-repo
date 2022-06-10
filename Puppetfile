@@ -42,7 +42,7 @@ mod 'dsc-auditpolicydsc','1.4.0-0-4'
 mod 'dsc-securitypolicydsc','2.10.0-0-3'
 
 
-mod 'puppetlabs-cem_windowsx',
+mod 'puppetlabs-cem_windows',
   git:     'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
   #commit: '0f9dc925845c18253e44502a02c203f158171663'
   tag:  'v1.2.1'
