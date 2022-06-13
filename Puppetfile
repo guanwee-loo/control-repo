@@ -29,13 +29,19 @@ mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-cd4pe_jobs', '1.6.0'
 
 
+#For peadm
+mod 'puppetlabs-peadm', '3.7.0'
+mod 'WhatsARanjit-node_manager', '0.7.5'
+mod 'puppetlabs-bolt_shim', '0.4.0'
+mod 'puppetlabs-apply_helpers', '0.3.0'
+mod 'puppet-format', '1.0.0'
+mod 'puppetlabs-service', '2.2.0'
+
 #For comply
 mod 'puppetlabs-comply', '2.5.0'
 mod 'puppetlabs-inifile', '5.3.0'
 mod 'puppetlabs-java', '8.1.0'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
-
-
 
 
 #For CEM
