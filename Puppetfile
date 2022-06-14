@@ -56,15 +56,19 @@ mod 'puppet-selinux', '3.2.0'
 mod 'puppet-logrotate', '5.0.0'
 mod 'puppetlabs-augeas_core', '1.1.1'
 
-mod 'puppetlabs-cem_linux',
-  git:     'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
-  #commit: '0f9dc925845c18253e44502a02c203f158171663'
-  tag:  'v1.2.0'
+#Premium modules
+mod 'puppetlabs-cem_windows', '1.2.1'
+mod 'puppetlabs-cem_linux', '1.2.0'
 
-mod 'puppetlabs-cem_windows',
-  git:     'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
-  #commit: '0f9dc925845c18253e44502a02c203f158171663'
-  tag:  'v1.2.1'
+#mod 'puppetlabs-cem_linux',
+#  git:     'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
+#  #commit: '0f9dc925845c18253e44502a02c203f158171663'
+#  tag:  'v1.2.0'
+
+#mod 'puppetlabs-cem_windows',
+#  git:     'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
+#  #commit: '0f9dc925845c18253e44502a02c203f158171663'
+#  tag:  'v1.2.1'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
