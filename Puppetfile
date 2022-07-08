@@ -40,6 +40,9 @@ mod 'puppetlabs-comply', '2.5.0'
 mod 'puppetlabs-java', '8.1.0'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
+#For pe_status_check
+mod 'puppetlabs-pe_status_check', '2.0.2'
+
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
 #mod 'apache',
