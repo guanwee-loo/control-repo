@@ -13,4 +13,6 @@ hierarchy:
 
 plan_hierarchy:
   - name: "Static data"
-    path: "common.yaml"
+    data_hash: yaml_data
+    paths: 
+      - "common.yaml"
