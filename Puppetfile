@@ -67,7 +67,7 @@ mod 'puppetlabs-pe_status_check', '2.0.2'
 
 #For rsan module
 mod 'puppetlabs-rsan', '0.3.0'
-mod 'deranne/nfs', '2.1.8'
+mod 'derdanne-nfs', '2.1.8'
 mod 'puppetlabs/postgresql', '7.5.0'
 mod 'puppetlabs-puppet_metrics_dashboard', '2.7.0'
 mod 'puppetlabs/transition', '1.0.0'
