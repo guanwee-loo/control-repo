@@ -60,6 +60,10 @@ mod 'puppetlabs-augeas_core', '1.1.1'
 mod 'puppetlabs-cem_windows', '1.2.1'
 mod 'puppetlabs-cem_linux', '1.2.0'
 
+
+#For pe_status_check
+mod 'puppetlabs-pe_status_check', '2.0.2'
+
 #mod 'puppetlabs-cem_linux',
 #  git:     'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
 #  #commit: '0f9dc925845c18253e44502a02c203f158171663'
