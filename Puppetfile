@@ -75,7 +75,7 @@ mod 'herculesteam/augeasproviders_core', '3.1.0'
 mod 'herculesteam/augeasproviders_shellvar', '4.1.0'
 mod 'puppet-grafana','10.0.1'
 mod 'puppet-telegra','4.2.0'
-mod 'puppetlabs-puppetserver_gem', '1.1.1''
+mod 'puppetlabs-puppetserver_gem', '1.1.1'
 
 #mod 'puppetlabs-cem_linux',
 #  git:     'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
