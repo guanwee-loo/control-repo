@@ -65,18 +65,6 @@ mod 'puppetlabs-cem_linux', '1.2.0'
 mod 'puppetlabs-pe_status_check', '2.0.2'
 
 
-#For rsan module
-mod 'puppetlabs-rsan', '0.3.0'
-mod 'derdanne-nfs', '2.1.8'
-mod 'puppetlabs/postgresql', '7.5.0'
-mod 'puppetlabs-puppet_metrics_dashboard', '2.7.0'
-mod 'puppetlabs/transition', '1.0.0'
-mod 'herculesteam/augeasproviders_core', '3.1.0'
-mod 'herculesteam/augeasproviders_shellvar', '4.1.0'
-mod 'puppet-grafana','10.0.1'
-mod 'puppet-telegraf','4.2.0'
-mod 'puppetlabs-puppetserver_gem', '1.1.1'
-
 #mod 'puppetlabs-cem_linux',
 #  git:     'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
 #  #commit: '0f9dc925845c18253e44502a02c203f158171663'
@@ -96,3 +84,7 @@ mod 'puppetlabs-puppetserver_gem', '1.1.1'
 #mod 'apache'
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache'
 #  branch: 'docs_experiment'
+
+mod 'jupyterhub'
+  git:    'git@github.com:guanwee-loo/jupyterhub.git'
+  branch: 'iter1'
