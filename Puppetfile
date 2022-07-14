@@ -86,5 +86,5 @@ mod 'puppetlabs-pe_status_check', '2.0.2'
 #  branch: 'docs_experiment'
 
 mod 'jupyterhub'
-  git:    'git@github.com:guanwee-loo/jupyterhub.git'
+  git:    'git@github.com:guanwee-loo/jupyterhub.git',
   branch: 'iter1'
