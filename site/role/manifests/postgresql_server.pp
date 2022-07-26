@@ -10,14 +10,13 @@ class role::postgresql_server (
 
   #https://noobient.com/2019/11/26/postgresql-on-centos-8-and-rhel-8/
   exec { 'dnf -y module disable postgresql':
-    refreshonly => false,
-    creates     => '/var/tmp/pginstalled',
+    refreshonly => true,
     path        => ['/usr/bin'],
   }
   class { 'postgresql::globals':
     manage_package_repo => true,
     version             => String($version),
-    require             => Exec['dnf -y module disable postgresql'],
+    notify              => Exec['dnf -y module disable postgresql'],
   }
   class { 'postgresql::server':
     require => Class['postgresql::globals'],
