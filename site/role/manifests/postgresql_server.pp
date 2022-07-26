@@ -11,12 +11,12 @@ class role::postgresql_server (
   #https://noobient.com/2019/11/26/postgresql-on-centos-8-and-rhel-8/
   exec { 'dnf -y module disable postgresql':
     refreshonly => true,
-    path        => ['/usr/bin'],
+    subscribe   => Class['postgresql::globals'],
   }
   class { 'postgresql::globals':
     manage_package_repo => true,
     version             => String($version),
-    require             => Exec['dnf -y module disable postgresql'],
+    #require             => Exec['dnf -y module disable postgresql'],
   }
   class { 'postgresql::server':
     require => Class['postgresql::globals'],
