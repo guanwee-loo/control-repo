@@ -1,9 +1,12 @@
 # @summary Setup a vanilla postgresql server 
+# Depends on the following module:
+#   mod 'puppetlabs-postgresql', '7.5.0'
 #
 # Install a PostgreSQL server instance
 #
 # @example
 #   include role::postgresql_server
+# 
 class role::postgresql_server (
   $version = 12,
 ){
