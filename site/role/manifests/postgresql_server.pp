@@ -16,7 +16,7 @@ class role::postgresql_server (
   class { 'postgresql::globals':
     manage_package_repo => true,
     version             => String($version),
-    notify              => Exec['dnf -y module disable postgresql'],
+    require             => Exec['dnf -y module disable postgresql'],
   }
   class { 'postgresql::server':
     require => Class['postgresql::globals'],
