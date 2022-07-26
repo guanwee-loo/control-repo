@@ -5,7 +5,7 @@
 # @example
 #   include role::postgresql_server
 class role::postgresql_server (
-  $version,
+  $version = 12,
 ){
 
   #https://noobient.com/2019/11/26/postgresql-on-centos-8-and-rhel-8/
