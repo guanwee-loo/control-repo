@@ -12,6 +12,7 @@ class role::postgresql_server (
   exec { 'dnf -y module disable postgresql':
     refreshonly => true,
     subscribe   => Class['postgresql::globals'],
+    path        => ['/usr/bin'],
   }
   class { 'postgresql::globals':
     manage_package_repo => true,
