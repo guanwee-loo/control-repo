@@ -17,11 +17,10 @@ class role::postgresql_server (
     provider => 'dnfmodule'
   }
 
-
   class { 'postgresql::globals':
     manage_package_repo => true,
     version             => String($version),
-    #require             => Exec['dnf -y module disable postgresql'],
+    require             => Package['postgresql'],
   }
   class { 'postgresql::server':
     require => Class['postgresql::globals'],
