@@ -53,6 +53,7 @@ class role::postgresql_server (
   }
 
   exec { 'su - postgres -c "psql < /var/lib/pgsql/seed.sql"':
+    path        => ['/bin'],
     refreshonly => true,
   }
 
