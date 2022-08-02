@@ -45,7 +45,7 @@ class role::postgresql_server (
  "
  file {'/var/lib/pgsql/seed.sql':
         ensure => present,
-	content => $str,
+	content => $sql,
  }
 
 }
