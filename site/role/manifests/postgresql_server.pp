@@ -28,4 +28,24 @@ class role::postgresql_server (
   class { 'postgresql::server':
     require => Class['postgresql::globals'],
   }
+  $sql = "
+     create user test_user_001;
+     create or replace procedure pro()
+     language plpgsql
+     as $$
+     declare
+     -- variable declaration
+     begin
+     -- stored procedure body
+     end; $$;
+     create database  test_db;
+     \c test_db
+     create schema if not exists test_schema;
+     create table test_schema.test_table ( user_id serial primary key, role_name varchar(255));
+ "
+ file {'/var/lib/pgsql/seed.sql':
+        ensure => present,
+	content => $str,
+ }
+
 }
