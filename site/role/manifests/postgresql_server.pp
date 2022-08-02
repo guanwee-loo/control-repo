@@ -27,6 +27,7 @@ class role::postgresql_server (
   }
   class { 'postgresql::server':
     require => Class['postgresql::globals'],
+    notify  => File['/var/lib/pgsql/seed.sql'],
   }
 
   # Seed the database with some data
