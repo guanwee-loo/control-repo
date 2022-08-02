@@ -28,6 +28,8 @@ class role::postgresql_server (
   class { 'postgresql::server':
     require => Class['postgresql::globals'],
   }
+
+  # Seed the database with some data
   $sql = "
      create user test_user_001;
      create or replace procedure pro()
@@ -42,10 +44,16 @@ class role::postgresql_server (
      \c test_db
      create schema if not exists test_schema;
      create table test_schema.test_table ( user_id serial primary key, role_name varchar(255));
- "
- file {'/var/lib/pgsql/seed.sql':
-        ensure => present,
+  "
+  file {'/var/lib/pgsql/seed.sql':
+        ensure  => present,
 	content => $sql,
- }
+        notify => Exec['su - postgres -c "psql < /var/lib/pgsql/seed.sql"'], 
+        
+  }
+
+  exec { 'su - postgres -c "psql < /var/lib/pgsql/seed.sql"':
+    refreshonly => true,
+  }
 
 }
